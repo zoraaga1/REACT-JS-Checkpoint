@@ -1,60 +1,60 @@
-// App.js
 import React from 'react';
-import { Container, Navbar, Nav, Card, Row, Col } from 'react-bootstrap';
+import { Container, Navbar, Nav, Card, Row, Col, Button } from 'react-bootstrap';
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <Navbar bg="dark" variant="dark" expand="lg">
-          <Container>
-            <Navbar.Brand href="#">MyApp</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#about">About</Nav.Link>
-                <Nav.Link href="#contact">Contact</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-
-        <Container className="mt-4">
-          <h1 className="text-center mb-4">Welcome to My React-Bootstrap App</h1>
-
-          <Row>
-            <Col md={4}>
-              <Card>
-                <Card.Img variant="top" src="https://via.placeholder.com/150" />
-                <Card.Body>
-                  <Card.Title>Card 1</Card.Title>
-                  <Card.Text>This is the first card.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <Card.Img variant="top" src="https://via.placeholder.com/150" />
-                <Card.Body>
-                  <Card.Title>Card 2</Card.Title>
-                  <Card.Text>This is the second card.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col md={4}>
-              <Card>
-                <Card.Img variant="top" src="https://via.placeholder.com/150" />
-                <Card.Body>
-                  <Card.Title>Card 3</Card.Title>
-                  <Card.Text>This is the third card.</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+    <div className="App">
+      <Navbar bg="primary" variant="dark" expand="lg" className="shadow-sm">
+        <Container>
+          <Navbar.Brand href="#">ZoraaShop</Navbar.Brand>
+          <Navbar.Toggle aria-controls="main-navbar" />
+          <Navbar.Collapse id="main-navbar">
+            <Nav className="ms-auto">
+              <Nav.Link href="#features">Features</Nav.Link>
+              <Nav.Link href="#gallery">Gallery</Nav.Link>
+              <Nav.Link href="#support">Support</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
-      </div>
-    </>
+      </Navbar>
+
+      <Container className="mt-5">
+        <h2 className="text-center mb-4 text-secondary">Explore Our Collection</h2>
+
+        <Row className="g-4">
+          <Col lg={4} md={6}>
+            <Card className="h-100 shadow-sm">
+              <Card.Img variant="top" src="https://placekitten.com/300/200" />
+              <Card.Body>
+                <Card.Title>Cat Haven</Card.Title>
+                <Card.Text>Discover peace with this adorable feline friend.</Card.Text>
+                <Button variant="outline-primary" size="sm">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col lg={4} md={6}>
+            <Card className="h-100 shadow-sm">
+              <Card.Img variant="top" src="https://placekitten.com/301/200" />
+              <Card.Body>
+                <Card.Title>Whisker World</Card.Title>
+                <Card.Text>Adventure awaits with every soft purr and meow.</Card.Text>
+                <Button variant="outline-success" size="sm">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col lg={4} md={6}>
+            <Card className="h-100 shadow-sm">
+              <Card.Img variant="top" src="https://placekitten.com/302/200" />
+              <Card.Body>
+                <Card.Title>Fur Paradise</Card.Title>
+                <Card.Text>Perfect choice for cozy vibes and cuteness overload.</Card.Text>
+                <Button variant="outline-warning" size="sm">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
